@@ -10,7 +10,7 @@ spec = Gem::Specification.new do |s|
   
   s.require_path = 'lib'
   s.files = `git ls-files`.lines.collect { |line| line.strip }
-  s.executables = Dir['bin/*'].find_all { |file| File.executable?(file) }
+  s.executables = Dir['bin/*'].find_all { |file| File.executable?(file) }.collect { |file| File.basename(file) }
   
   s.add_dependency('em-websocket', '~> 0.3')
   s.add_dependency('haml', '~> 3.1')
