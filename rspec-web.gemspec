@@ -1,6 +1,4 @@
-require 'rake/version_task'
-
-spec = Gem::Specification.new do |s|
+Gem::Specification.new do |s|
   s.name = 'rspec-web'
   s.author = 'Ryan Scott Lewis'
   s.homepage = 'http://github.com/c00lryguy/rspec-web'
@@ -18,10 +16,5 @@ spec = Gem::Specification.new do |s|
   s.add_dependency('sinatra', '~> 1.3')
   s.add_dependency('rspec', '~> 2.0')
   s.add_dependency('web-socket-ruby', '~> 0.1')
-  s.add_dependency('version', '~> 1.0')
-end
-
-Rake::VersionTask.new do |task|
-  task.with_git_tag = true
-  task.with_gemspec = spec
+  # s.add_dependency('version', '~> 1.0')
 end
