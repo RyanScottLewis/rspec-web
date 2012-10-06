@@ -1,0 +1,31 @@
+.tab-pane.iteration(id="iteration-<%= timestamp %>")  
+  .row-fluid.progress-container(id="iteration-<%= timestamp %>-progress-row")
+    .span12(style="padding-right: 10px;")
+      .progress.progress-striped.progress-passing.active(id="iteration-<%= timestamp %>-progress-container")
+        .bar(id="iteration-<%= timestamp %>-progress-bar" style="width: 0%;")
+  
+  .row-fluid
+    .span12
+      %h6
+        %span(id="iteration-<%= timestamp %>-finished-example-count") 0
+        of <%= exampleCount %> example<%= exampleCount > 1 ? "s" : "" %> finished
+  
+  .tabbable
+    %ul.nav.nav-tabs
+      %li.active
+        %a.tab-passing(href="#iteration-<%= timestamp %>-tab-content-passing" id="iteration-<%= timestamp %>-tab-passing" data-toggle="tab")
+          Passing
+          %span.label.label-passing(id="iteration-<%= timestamp %>-tab-passing-count") 0
+      %li
+        %a.tab-pending(href="#iteration-<%= timestamp %>-tab-content-pending" id="iteration-<%= timestamp %>-tab-pending" data-toggle="tab")
+          Pending
+          %span.label.label-pending(id="iteration-<%= timestamp %>-tab-pending-count") 0
+      %li
+        %a.tab-failing(href="#iteration-<%= timestamp %>-tab-content-failing" id="iteration-<%= timestamp %>-tab-failing" data-toggle="tab")
+          Failing
+          %span.label.label-failing(id="iteration-<%= timestamp %>-tab-failing-count") 0
+    
+    .tab-content
+      .tab-pane.active(id="iteration-<%= timestamp %>-tab-content-passing")
+      .tab-pane(id="iteration-<%= timestamp %>-tab-content-pending")
+      .tab-pane(id="iteration-<%= timestamp %>-tab-content-failing")

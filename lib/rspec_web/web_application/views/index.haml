@@ -1,0 +1,104 @@
+!!! 5
+%html(lang="en")
+  %head
+    %title Rspec Web Frontend
+    
+    %meta(charset="utf-8")
+    %meta(name="apple-mobile-web-app-capable" content="yes")
+    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    
+    /[if lt IE 9]
+      %script(type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+    
+    %link(href="/css/bootstrap.responsive.css" media="screen" rel="stylesheet" type="text/css")
+    %link(href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css")
+    %link(href="/css/bootstrap.bottombar.css" media="screen" rel="stylesheet" type="text/css")
+    %link(href="/css/style.css" media="screen" rel="stylesheet" type="text/css")
+    
+    :css
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    
+    / %link(href="images/favicon.ico" rel="shortcut icon")
+    / %link(href="images/apple-touch-icon.png" rel="apple-touch-icon")
+    / %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72")
+    / %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114")
+    
+    %script#iterationListEntry(type="text/html")= partial(:iteration_list_entry)
+    %script#iterationEntry(type="text/html")= partial(:iteration_entry)
+    %script#exampleEntry(type="text/html")= partial(:example_entry)
+  %body
+    .navbar.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          %a.brand(href="#") Rspec Web
+          %ul.nav.pull-right
+            %li
+              .btn-group
+                %a.btn#btn-settings(href="#")
+                  %i.icon-cog
+            %li.divider-vertical
+            %li
+              .btn-group
+                %a.btn#btn-run-specs(href="#")
+                  %i.icon-play
+    .container-fluid#settings
+      .row-fluid
+        .well
+          .row-fluid
+            .input-prepend
+              %span.add-on Rspec Command
+              %input.span8#settingsRspecCommand(type="text" placeholder="")
+          .row-fluid
+            .span12
+              %a.btn.btn-small.btn-primary.pull-right#btn-settings-save(href="#") Save
+              %a.btn.btn-small.btn.pull-right#btn-settings-cancel(href="#" style="margin-right: 10px;") Cancel
+    .container-fluid#alerts
+      .alert.alert-block#alertSettingsNotSaved
+        %strong Warning!
+        Settings were not saved.
+      .alert.alert-success#alertSettingsSaved
+        %strong Success!
+        Settings were saved.
+    .container-fluid#views
+      .row-fluid#noIterationsErrorView
+        .well
+          %h1 No iterations yet.
+          %h6 Hurry up and run some specs!
+      .row-fluid#iterationsView
+        .span4#iterationsListContainer
+          .tabbable.well(style="padding: 8px 0;")
+            %ul.nav.nav-list#iterationsList
+              %li.nav-header Iterations
+        .span8#iterationsContainer
+          .tab-content#iterations
+    .container-fluid#footer
+      .row-fluid
+        %hr(style="margin-top: 0;")
+        %p.pull-left &copy; Lewis Software 2012
+        .pull-right 
+          %img(src="/img/rails.png" width="20" height="25")
+        .pull-right(style="margin-right: 10px;")
+          %img(src="/img/bootstrap.png" width="25" height="25")
+        .pull-right(style="margin-right: 10px;")
+          %a(href="javascript:location.reload(true)") Refresh
+          
+    %script(type="text/javascript" src="/js/lib/jquery.js")
+    %script(type="text/javascript" src="/js/lib/jquery.cookie.js")
+    %script(type="text/javascript" src="/js/lib/jquery.gracefulWebSocket.js")
+    %script(type="text/javascript" src="/js/lib/jquery.json.js")
+    %script(type="text/javascript" src="/js/lib/underscore.js")
+    %script(type="text/javascript" src="/js/lib/backbone.js")
+    %script(type="text/javascript" src="/js/lib/bootstrap.js")
+    %script(type="text/javascript" src="/js/lib/date.js")
+    
+    %script(type="text/javascript" src="/js/models/viewContainer.js")
+    %script(type="text/javascript" src="/js/models/webSocketContainer.js")
+    %script(type="text/javascript" src="/js/models/iterationCollection.js")
+    %script(type="text/javascript" src="/js/models/exampleCollection.js")
+    %script(type="text/javascript" src="/js/models/iteration.js")
+    
+    %script(type="text/javascript" src="/js/rspecWebFrontend.js")
+    
+    %script(type="text/javascript" src="/js/script.js")

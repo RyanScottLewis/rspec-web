@@ -1,0 +1,155 @@
+/* Keep divider shown at all times */
+.navbar .nav > .divider-vertical {
+  display: block;
+}
+
+#views > .row-fluid {
+  display: none;
+}
+
+#views {
+  padding-bottom: 110px;
+}
+
+#footer {
+  background-color: white;
+/*  height: 80px;*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#settings {
+  display: none;
+  position: absolute;
+  top: 35px;
+}
+
+#settings .well {
+  -webkit-box-shadow: 0px 0px 10px 1px #000000;
+  -moz-box-shadow: 0px 0px 10px 1px #000000;
+  box-shadow: 0px 0px 10px 1px #000000;
+}
+
+.alert {
+  display: none;
+  position: absolute;
+  top: 35px;
+  -webkit-box-shadow: 0px 0px 10px 1px #000000;
+  -moz-box-shadow: 0px 0px 10px 1px #000000;
+  box-shadow: 0px 0px 10px 1px #000000;
+}
+
+.example-count {
+  color: white;
+  font-weight: bold;
+  width: 6px;
+  height: 6px;
+  padding: 3px;
+  text-decoration: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.passing-count {
+  @extend .example-count;
+  background-color: #62C462;
+}
+
+.pending-count {
+  @extend .example-count;
+  background-color: #F0E181;
+}
+
+.failing-count {
+  @extend .example-count;
+  background-color: #EE5F5B;
+}
+
+.progress-passing .bar {
+  background-color: #62C462;
+  background-image: none;
+}
+.progress-passing.active .bar {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.progress-pending .bar {
+  background-color: #F0E181;
+  background-image: none;
+}
+
+.progress-pending.active .bar {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.25)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.25)), color-stop(0.75, rgba(255, 255, 255, 0.25)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.25) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.25) 75%, transparent 75%, transparent);
+}
+
+.progress-failing .bar {
+  background-color: #EE5F5B;
+  background-image: none;
+}
+
+.progress-failing.active .bar {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.tab-passing.active {
+  background: -moz-linear-gradient(top,  rgba(89,204,40,0.25) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(89,204,40,0.25)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(89,204,40,0.25) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(89,204,40,0.25) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(89,204,40,0.25) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(89,204,40,0.25) 0%,rgba(125,185,232,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4059cc28', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+.tab-pending.active {
+  background: -moz-linear-gradient(top,  rgba(208,211,42,0.25) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(208,211,42,0.25)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(208,211,42,0.25) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(208,211,42,0.25) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(208,211,42,0.25) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(208,211,42,0.25) 0%,rgba(125,185,232,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40d0d32a', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+.tab-failing.active {
+  background: -moz-linear-gradient(top,  rgba(204,40,40,0.25) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,40,40,0.25)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(204,40,40,0.25) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(204,40,40,0.25) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(204,40,40,0.25) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+  background: linear-gradient(top,  rgba(204,40,40,0.25) 0%,rgba(125,185,232,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40cc2828', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+.label-passing {
+  @extend .label;
+  background-color: #62C462;
+}
+
+.label-pending {
+  @extend .label;
+  background-color: #F0E181;
+}
+
+.label-failing {
+  @extend .label;
+  background-color: #CC2828;
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'pathname'
+lib = Pathname.new(__FILE__).dirname.join('..', 'lib').expand_path.to_s
+$:.unshift(lib) unless $:.include?(lib)
+require 'rspec_web'
+
+# Load spork if it exists
+begin
+  require 'spork'
+  require 'spork/runner'
+  
+  Thread.new { Spork::Runner.run(ARGV, STDOUT, STDERR) }
+rescue LoadError; end
+
+RspecWeb::WebSocketServer.run!
+RspecWeb::WebApplication.run!

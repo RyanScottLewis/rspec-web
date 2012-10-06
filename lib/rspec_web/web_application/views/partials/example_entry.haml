@@ -1,0 +1,10 @@
+.accordion(id="iteration-<%= timestamp %>-accordion")
+  .accordion-group
+    .accordion-heading
+      %a.accordion-toggle(data-toggle="collapse" data-parent="#iteration-<%= timestamp %>-accordion" href="#iteration-<%= timestamp %>-example-<%= exampleIndex %>")
+        <%= description %>
+    .accordion-body.collapse(id="iteration-<%= timestamp %>-example-<%= exampleIndex %>" style="height: 0px;")
+      %p Started: <%= started_at %>
+      %p Finished: <%= finished_at %>
+      %p Run time: <%= run_time %>
+      %p Location: <%= file_path %>:<%= line_number %>
