@@ -48,7 +48,7 @@ which will be running tests.
 The `Rspec::Web::Application` needs to be run on a computer accessible on your network by all devices
 which will be viewing the application.
 
-On host 192.168.1.10 (for example; your `RSpec::Web` server):
+On host 192.168.1.10 (for example; your server):
 
 1. Run the `rspec-web` command which will start of two servers; an HTTP server and a Web Socket server.
 
