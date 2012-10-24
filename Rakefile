@@ -19,6 +19,9 @@ spec = Gem::Specification.new do |s|
   s.add_dependency('rspec', '~> 2.0')
   s.add_dependency('web-socket-ruby', '~> 0.1')
   s.add_dependency('version', '~> 1.0')
+  s.add_dependency('sprockets', '~> 2.0')
+  s.add_dependency('uglifier', '~> 1.0')
+  s.add_dependency('coffee-script', '~> 2.2')
 end
 
 Rake::VersionTask.new do |task|

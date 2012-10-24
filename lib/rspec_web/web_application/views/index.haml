@@ -10,10 +10,10 @@
     /[if lt IE 9]
       %script(type="text/javascript" src="http://html5shim.googlecode.com/svn/trunk/html5.js")
     
-    %link(href="/css/bootstrap.responsive.css" media="screen" rel="stylesheet" type="text/css")
-    %link(href="/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css")
-    %link(href="/css/bootstrap.bottombar.css" media="screen" rel="stylesheet" type="text/css")
-    %link(href="/css/style.css" media="screen" rel="stylesheet" type="text/css")
+    %link(href="#{asset_path('bootstrap.responsive.css')}" media="screen" rel="stylesheet" type="text/css")
+    %link(href="#{asset_path('bootstrap.css')}" media="screen" rel="stylesheet" type="text/css")
+    %link(href="#{asset_path('bootstrap.bottombar.css')}" media="screen" rel="stylesheet" type="text/css")
+    %link(href="#{asset_path('style.css')}" media="screen" rel="stylesheet" type="text/css")
     
     :css
       body {
@@ -84,6 +84,7 @@
         .pull-right(style="margin-right: 10px;")
           %a(href="javascript:location.reload(true)") Refresh
           
+    %script(type="text/javascript" src="#{asset_path('application.js')")
     %script(type="text/javascript" src="/js/lib/jquery.js")
     %script(type="text/javascript" src="/js/lib/jquery.cookie.js")
     %script(type="text/javascript" src="/js/lib/jquery.gracefulWebSocket.js")
