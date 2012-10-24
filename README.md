@@ -6,7 +6,7 @@ A web front-end for `RSpec` tests.
 
 This consists of three main components: `RSpec::Web::Formatter`, `RSpec::Web::Application`, and `RSpec::Web::SocketServer`.
 
-The `Formatter` is used by `RSpec` to send messages to the `SocketServer`, which notifies all users of the `Application` and displays the output.
+The `Formatter` is used by `RSpec` to send messages to the `SocketServer`, which displays to all users of the `Application`.
 
     Dev1 Workstation ➙ Formatter ➘              ➚ Application ➙ Dev1 Workstation
     Dev2 Workstation ➙ Formatter ➙ SocketServer ➙ Application ➙ Dev2 iPad
