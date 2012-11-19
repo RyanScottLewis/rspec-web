@@ -1,6 +1,6 @@
 # rspec-web
 
-A web front-end for `RSpec` tests.
+A web front-end for `RSpec` 2 tests.
 
 *Insert sexy screenshots here...*
 
@@ -8,9 +8,9 @@ This consists of three main components: `RSpec::Web::Formatter`, `RSpec::Web::Ap
 
 The `Formatter` is used by `RSpec` to send messages to the `SocketServer`, which notifies all users of the `Application` and displays the output.
 
-    Dev1 Workstation ➙ Formatter ➘              ➚ Application ➙ Dev1 Workstation
+    Dev1 Workstation ➙ Formatter ➙              ➙ Application ➙ Dev1 Workstation
     Dev2 Workstation ➙ Formatter ➙ SocketServer ➙ Application ➙ Dev2 iPad
-    Dev3 Workstation ➙ Formatter ➚              ➘ Application ➙ Dev3 Android
+    Dev3 Workstation ➙ Formatter ➙              ➙ Application ➙ Dev3 Android
 
 ## Install
 
@@ -30,7 +30,9 @@ then run `bundle install`.
 
 ### RubyGems
 
-    gem install rspec-web
+```sh
+$ gem install rspec-web
+```
 
 ## Usage
 
@@ -56,15 +58,19 @@ On host 192.168.1.25 (for example; i.e. a developer's workstation):
 
 1. Add or edit your `Gemfile` with the following (developers do not need the HTTP/Web Socket server):
 
-        group :development do
-          gem 'rspec-web', require: 'rspec/web/formatter'
-        end
+    ```ruby
+    group :development do
+      gem 'rspec-web', require: 'rspec/web/formatter'
+    end
+    ```
 
 2. Add or edit your `spec_helper.rb` with the following:
 
-        RSpec.configure do |c|
-          c.web.host = '192.168.1.10'
-        end
+    ```ruby
+    RSpec.configure do |c|
+      c.web.host = '192.168.1.10'
+    end
+    ```
 
 3. Open web browser with URL `http://192.168.1.10:4567/`
 4. Run your specs with the formatter by using `rspec spec -f RSpec::Web::Formatter`

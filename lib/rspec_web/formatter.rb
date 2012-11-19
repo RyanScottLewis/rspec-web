@@ -56,6 +56,7 @@ module RspecWeb
     
     private
     
+    # TODO: This needs to be abstracted into RSpec::Core::Example and RSpec::Core::ExampleGroup
     def example_to_hash(example)
       {
         :started_at => example.metadata[:execution_result][:started_at].to_i,
