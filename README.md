@@ -6,7 +6,7 @@ A web front-end for `RSpec` 2 tests.
 
 This consists of three main components: `RSpec::Web::Formatter`, `RSpec::Web::Application`, and `RSpec::Web::SocketServer`.
 
-The `Formatter` is used by `RSpec` to send messages to the `SocketServer`, which notifies all users of the `Application` and displays the output.
+The `Formatter` is used by `RSpec` to send messages to the `SocketServer`, which displays to all users of the `Application`.
 
     Dev1 Workstation ➙ Formatter ➙              ➙ Application ➙ Dev1 Workstation
     Dev2 Workstation ➙ Formatter ➙ SocketServer ➙ Application ➙ Dev2 iPad
@@ -50,11 +50,11 @@ which will be running tests.
 The `Rspec::Web::Application` needs to be run on a computer accessible on your network by all devices
 which will be viewing the application.
 
-On host 192.168.1.10 (for example; i.e. your `RSpec::Web` server):
+On host 192.168.1.10 (for example; your server):
 
 1. Run the `rspec-web` command which will start of two servers; an HTTP server and a Web Socket server.
 
-On host 192.168.1.25 (for example; i.e. a developer's workstation):
+On host 192.168.1.25 (for example; a developer's workstation):
 
 1. Add or edit your `Gemfile` with the following (developers do not need the HTTP/Web Socket server):
 
