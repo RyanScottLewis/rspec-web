@@ -156,9 +156,9 @@ TODO: Can set port the server is running on, the format of the messages being re
 
   * DataBase
 
-        Dev1 Workstation ➙ Formatter ➘               ➚ Application ➙ Dev1 Workstation
-        Dev2 Workstation ➙ Formatter ➙ SocketServer  ➙ Application ➙ Dev2 iPad
-        Dev3 Workstation ➙ Formatter ➚    ➘    ➚    ➘ Application ➙ Dev3 Android
+        Dev1 Workstation ➙ Formatter ➙              ➙ Application ➙ Dev1 Workstation
+        Dev2 Workstation ➙ Formatter ➙ SocketServer ➙ Application ➙ Dev2 iPad
+        Dev3 Workstation ➙ Formatter ➙    ➘    ➚    ➙ Application ➙ Dev3 Android
                                          Database
 
   * Authentication
